@@ -20,14 +20,10 @@ class Minimax:
     def generate_boards(self, board, currentPlayer):
         result = []
 
-        # TODO
-        addcounter = 0
-
         for addMove in board.get_add_moves():
             tempBoard = copy.deepcopy(board)
             tempBoard.add_piece(addMove, currentPlayer)
             result.append(tempBoard)
-            addcounter += 1
 
         return result
 

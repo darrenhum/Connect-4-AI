@@ -4,8 +4,6 @@ class Player:
         self.piece = piece
 
     def move(self, board):
-        move = None
-
         valid = False
         while not valid:
 
@@ -19,6 +17,8 @@ class Player:
                     raise ValueError
                 else:
                     valid = True
+            except KeyboardInterrupt:
+                break
             except:
                 print("Invalid selection.")
                 continue
